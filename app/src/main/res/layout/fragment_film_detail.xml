@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".lesson1.ui.films_list.film_detail.FilmDetailFragment">
+
+    <View
+        android:id="@+id/left_color"
+        android:layout_width="5dp"
+        android:layout_height="500dp"
+        android:layout_margin="15dp"
+        android:background="@color/design_default_color_primary_dark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toEndOf="@id/left_color"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Title: ****" />
+
+    <TextView
+        android:id="@+id/original_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginLeft="25dp"
+        android:textColor="@color/purple_200"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toEndOf="@id/left_color"
+        app:layout_constraintTop_toBottomOf="@id/name_tv"
+        tools:text="@tools:sample/last_names" />
+
+    <ImageView
+        android:id="@+id/film_im"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_margin="30dp"
+        android:layout_marginLeft="30sp"
+        android:layout_marginEnd="12dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/original_tv" />
+
+    <TextView
+        android:id="@+id/director_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginLeft="25dp"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toEndOf="@id/left_color"
+        app:layout_constraintTop_toBottomOf="@id/film_im"
+        tools:text="Director : ****" />
+
+    <TextView
+        android:id="@+id/producer_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginLeft="25dp"
+        android:textColor="@color/design_default_color_primary"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/left_color"
+        app:layout_constraintTop_toBottomOf="@id/director_tv"
+        tools:text="Producer : ****" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:textColor="@color/design_default_color_primary"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toEndOf="@id/left_color"
+        app:layout_constraintTop_toBottomOf="@+id/producer_tv"
+        tools:text="Description : ****" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
